@@ -1,4 +1,4 @@
-package com.lethiec.concurrency;
+package com.lethiec.concurrency.thread;
 
 public class EachSecondCountThread implements Runnable {
     @Override

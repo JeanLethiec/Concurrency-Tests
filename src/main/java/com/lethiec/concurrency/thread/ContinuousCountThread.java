@@ -1,4 +1,4 @@
-package com.lethiec.concurrency;
+package com.lethiec.concurrency.thread;
 
 public class ContinuousCountThread implements Runnable {
     @Override
