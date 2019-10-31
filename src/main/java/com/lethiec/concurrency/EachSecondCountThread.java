@@ -1,15 +1,17 @@
 package com.lethiec.concurrency;
 
-public class CountThread implements Runnable {
+public class EachSecondCountThread implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i<10; i++) {
             try {
                 Thread.sleep(1000);
-                System.out.println(this + ": " + i);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                System.out.println("I've been interrupted !");
+                return;
             }
+            System.out.println(this + ": " + i);
+
         }
     }
 }
