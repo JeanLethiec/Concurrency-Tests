@@ -1,6 +1,6 @@
-package com.lethiec.concurrency.thread;
+package com.lethiec.concurrency.singlecount.thread;
 
-import com.lethiec.concurrency.counter.Counter;
+import com.lethiec.concurrency.singlecount.counter.Counter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

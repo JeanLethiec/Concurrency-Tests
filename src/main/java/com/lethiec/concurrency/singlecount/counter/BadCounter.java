@@ -1,4 +1,4 @@
-package com.lethiec.concurrency.counter;
+package com.lethiec.concurrency.singlecount.counter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
