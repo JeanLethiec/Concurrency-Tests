@@ -13,9 +13,4 @@ public class GoodCounter implements Counter {
         logger.info("GoodCounter: " + count);
         return count;
     }
-
-    public synchronized int decrement() {
-        count--;
-        return count;
-    }
 }
