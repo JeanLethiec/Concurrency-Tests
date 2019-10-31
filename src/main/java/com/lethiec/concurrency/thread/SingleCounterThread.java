@@ -1,9 +1,11 @@
 package com.lethiec.concurrency.thread;
 
-import com.lethiec.concurrency.SafePrinter;
 import com.lethiec.concurrency.counter.Counter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SingleCounterThread implements Runnable {
+    private Logger logger = LoggerFactory.getLogger(SingleCounterThread.class);
     private Counter counter;
     private String title;
 
@@ -12,7 +14,7 @@ public class SingleCounterThread implements Runnable {
         this.title = title;
     }
 
-    public String getTitle() {
+    String getTitle() {
         return title;
     }
 
@@ -22,11 +24,11 @@ public class SingleCounterThread implements Runnable {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
-                System.out.println("I've been interrupted !");
+                logger.warn("I've been interrupted !");
                 return;
             }
 
-            System.out.println(getTitle() + ": " + counter.increment());
+            logger.info(getTitle() + ": " + counter.increment());
         }
     }
 }
